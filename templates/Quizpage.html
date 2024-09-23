@@ -1,0 +1,408 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+	/* Coded with love by Mutiullah Samim */
+  body,
+
+		html {
+			
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #282c34 !important;
+		}
+		.user_card {
+			height: auto;
+			width: 1000px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: whitesmoke;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 20px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+			
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 190px;
+			width: 190px;
+			top: -75px;
+			border-radius: 50%;
+			background: #282c34;
+			padding: 10px;
+			text-align: center;
+			
+		}
+		.brand_logo {
+			height: 170px;
+			width: 170px;
+			border-radius: 50%;
+			border: 2px solid white;
+		}
+		.form_container {
+			margin-top: 100px;
+		}
+		.login_btn {
+			width: 100%;
+			background: #c0392b !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #282c34 !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #c0392b !important;
+		}
+		.form-group{
+			display: inline-block;
+		}
+		label{
+			font-size: 20px;
+			margin-left: 2%;
+		}
+		input[type='checkbox'] {
+		
+		width:30px;
+		height:30px;
+		background:white;
+		border-radius:5px;
+		border:2px solid #555;
+		
+	}
+	input[type='radio'] {
+		
+		width:20px;
+		height:20px;
+		background:white;
+	
+		
+	}
+</style>
+<script>
+jQuery(function(){
+    var max = 3;
+    var checkboxes = $('input[id="question1"]');
+	
+                       
+    checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+        checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+    });
+});
+
+jQuery(function(){
+    var max = 3;
+    var checkboxes = $('input[id="question2"]');
+	
+                       
+    checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+        checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+    });
+});
+
+jQuery(function(){
+    var max = 1;
+    var checkboxes = $('input[id="question3"]');
+	
+                       
+    checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+        checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+    });
+});
+
+jQuery(function(){
+    var max = 3;
+    var checkboxes = $('input[id="question4"]');
+	
+                       
+    checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+        checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+    });
+});
+
+jQuery(function(){
+    var max = 2;
+    var checkboxes = $('input[id="question5"]');
+	
+                       
+    checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+        checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+    });
+});
+
+
+</script>
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+	<title>IBM CIC Hvem minder du om?</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<!--Coded with love by Mutiullah Samim-->
+<body style="margin-top: 5%;">
+
+	<form method="POST">
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="https://pbs.twimg.com/profile_images/897433904558350336/y-Np1wVI_400x400.jpg" class="brand_logo" alt="Logo">
+					</div>
+					
+
+				</div>
+				
+				
+
+					<div style="margin-top: 25%;">
+					<h5>hvilket område er du uddannet/studerer du indenfor?</h5>
+					<div class="radio">
+						<label><input type="radio" name="opt1radio" value="Software" checked>Software udvikling</label>
+					  </div>
+					  <div class="radio">
+						<label><input type="radio" name="opt1radio" value="Management">Management/Ledelse </label>
+					  </div>
+					  <div class="radio">
+						<label><input type="radio" name="opt1radio" value="Design">Design/UX</label>
+					  </div>
+					  <div class="radio">
+						<label><input type="radio" name="opt1radio" value="Datascience">Data science</label>
+					  </div>
+					  <div class="radio">
+						<label><input type="radio" name="opt1radio" value="Robotics">Robotics & engineering</label>
+					  </div>
+					
+			  _____________________________________________________________
+			  <div>
+				<h5>Hvor ligger din interesse?</h5>
+				<p style="font-size: 12px; color:cadetblue; ">Vælg kun 3</p>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" value="1_1" name="question1_1">
+					<label class="form-check-label" for="exampleCheck1">Cloud løsninger</label>
+				
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" value="1_2" name="question1_1">
+					<label class="form-check-label" for="exampleCheck1">Design thinking & User experience</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" value="1_3" name="question1_1">
+					<label class="form-check-label" for="exampleCheck1">Data science</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_4">
+					<label class="form-check-label" for="exampleCheck1">AI og Machine learning teknologi</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_5">
+					<label class="form-check-label" for="exampleCheck1">Projektledelse og management</label>
+				  </div>	  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_6">
+					<label class="form-check-label" for="exampleCheck1">Programmering/Udvikling</label>
+				  </div>	  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_7">
+					<label class="form-check-label" for="exampleCheck1">Cyber security</label>
+				  </div>	  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_8">
+					<label class="form-check-label" for="exampleCheck1">Blockchain</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_9">
+					<label class="form-check-label" for="exampleCheck1">Agile processer</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_10">
+					<label class="form-check-label" for="exampleCheck1">Automation</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question1" name="question1_1" value="1_11">
+					<label class="form-check-label" for="exampleCheck1">Robotics</label>
+				  </div>
+				  
+
+		  </div>
+		  _____________________________________________________________
+		  <div>
+			<h5>Hvad kan du bedst identificere dig med?</h5>
+			<p style="font-size: 12px; color:cadetblue; ">Vælg kun 3</p>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="question2" name="question2_1" value="2_1">
+				<label class="form-check-label" for="exampleCheck2">Madklubben</label>
+			  </div>
+			  <div class="form-check">
+				<input type="checkbox" class="form-check-input" id="question2" name="question2_1" value="2_2">
+				<label class="form-check-label" for="exampleCheck2">LAN Party</label>
+			  </div>
+			  <div class="form-check">
+				<input type="checkbox" class="form-check-input" id="question2" name="question2_1" value="2_3">
+				<label class="form-check-label" for="exampleCheck2">Løbe/sport klubben</label>
+			  </div>
+			  <div class="form-check">
+				<input type="checkbox" class="form-check-input" id="question2" name="question2_1" value="2_4">
+				<label class="form-check-label" for="exampleCheck2">Filmklubben</label>
+			  </div>
+			  <div class="form-check">
+				<input type="checkbox" class="form-check-input" id="question2" name="question2_1" value="2_5">
+				<label class="form-check-label" for="exampleCheck2">Læseklubben</label>
+			  </div>
+			  <div class="form-check">
+				<input type="checkbox" class="form-check-input" id="question2" name="question2_1" value="2_6">
+				<label class="form-check-label" for="exampleCheck2">Fredags bar</label>
+			  </div>
+			</div>
+
+			_____________________________________________________________
+			<div>
+				<h5>Hvilke af følgende arbejdsrelateret udsagn passer bedst på dig?</h5>
+				<p style="font-size: 12px; color:cadetblue; ">Vælg kun 2</p>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question5" name="question5_1" value="5_1">
+					<label class="form-check-label" for="exampleCheck2">Jeg elsker kundekontakt! – og kører gerne landet rundt for at møde dem!</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question5" name="question5_1" value="5_2">
+					<label class="form-check-label" for="exampleCheck2">Min arbejdsdag er fyldt med møder hvor jeg har mulighed for at diskutere og komme med forbedringer! </label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question5" name="question5_1" value="5_3">
+					<label class="form-check-label" for="exampleCheck2">Jeg arbejder bedst, når jeg er fokuseret og har ro til at arbejde i dybden</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question5" name="question5_1" value="5_4">
+					<label class="form-check-label" for="exampleCheck2">Jeg vil helst have min faste plads på kontoret, så jeg har styr på mine ting og følger min rutine!</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question5" name="question5_1" value="5_5">
+					<label class="form-check-label" for="exampleCheck2">Jeg er hende/ham mine kollegaer altid spørger til råds</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question5" name="question5_1" value="5_6">
+					<label class="form-check-label" for="exampleCheck2">Jeg har altid 110% styr på min dag og ved hvad der skal prioriteres hvornår</label>
+				  </div>
+				</div>
+	___________________________________________
+
+				<h5>Hvem er du i teamet?</h5>
+				<p style="font-size: 12px; color:cadetblue; ">Vælg kun 1</p>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question3" name="question3_1" value="3_1">
+					<label class="form-check-label" for="exampleCheck1">Ide-kvinden/manden (du har altid en ny idé i ærmet, og elsker at tænke kreativt!)</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question3" name="question3_1" value="3_2">
+					<label class="form-check-label" for="exampleCheck1">Problemløseren (du er hurtig til at spotte problemer, og lige så hurtig til at komme med løsningsforslag!)</label> 
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question3" name="question3_1" value="3_3">
+					<label class="form-check-label" for="exampleCheck1">Afslutteren (du er resultatorienteret, og du lægger stor vægt på at få ideerne ud til kunden)</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question3" name="question3_1" value="3_4">
+					<label class="form-check-label" for="exampleCheck1">Pleaseren (du sørger for, at alle har det godt i teamet – hvis teamet fungerer, opnår vi bedre resultater!)</label>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" class="form-check-input" id="question3" name="question3_1" value="3_5">
+					<label class="form-check-label" for="exampleCheck1">Lederen (du er hurtig til at danne overblik over teamet og de kompetencer i hver især har. Du er ikke bange for at gå forrest når beslutninger skal tages)</label>
+				  </div>
+				  <div>
+					_____________________________________________________________
+	
+					<h5>Favorit Serie?</h5>
+					<p style="font-size: 12px; color:cadetblue; ">Vælg kun 3</p>
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_1">
+						<label class="form-check-label" for="exampleCheck1">Game of thrones</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_2">
+						<label class="form-check-label" for="exampleCheck1">Silicon valley</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_3">
+						<label class="form-check-label" for="exampleCheck1">Mr.Robot</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_4">
+						<label class="form-check-label" for="exampleCheck1">Friends</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_5">
+						<label class="form-check-label" for="exampleCheck1">Modern Family </label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_6">
+						<label class="form-check-label" for="exampleCheck1">Big bang theory</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_7">
+						<label class="form-check-label" for="exampleCheck1">Gossip girl</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_8">
+						<label class="form-check-label" for="exampleCheck1">Californication</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_9">
+						<label class="form-check-label" for="exampleCheck1">Matador</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_10">
+						<label class="form-check-label" for="exampleCheck1">Badehotellet</label>
+					  </div>
+					  <div class="form-check">
+						<input type="checkbox" class="form-check-input" id="question4" name="question4_1" value="4_11">
+						<label class="form-check-label" for="exampleCheck1">Forbrydelsen</label>
+					  </div>
+					  
+			<input style="width: 100%; margin-top:5%;" class="btn btn-primary" value="Afslut" type ="submit"></input>
+				  
+			
+				</div>
+						  
+			</div>
+		</form>
+          </div>
+        </div>
+      </div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

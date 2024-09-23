@@ -1,0 +1,212 @@
+
+<html>
+<style>
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #3a5da8, #08095f, #106e91, #bfc6cc);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@import 'bourbon';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+
+body {
+   background: #efefef;
+   height: 100vh;
+   width: 100vw;
+   @include display(flex);
+   @include align-items(center);
+   @include justify-content(center);
+   font-family: 'Open Sans', serif;
+   
+}
+
+#user-avatar-input {
+   display: none;
+}
+
+.user-card {
+	position: absolute; 
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 540px; /* Need a specific value to work */
+   height:960px;
+   background: #fff;
+   border-radius: 2px;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transition: .2s;
+
+}
+
+.user-card__background {
+   background: #E8F8FF;
+   background-size: cover;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 5;
+   
+   
+   
+}
+
+.user-card__image-wrapper {
+   z-index: 10;
+  
+   border-radius: 130px;
+   display: inline-block;
+   position: relative;
+   
+
+}
+
+.user-card__avatar {
+   margin-bottom: 10%;
+   width: 260px;
+   height: 260px;
+   border-radius: 260px;
+   box-shadow: 0 0 0 5px rgba(0,0,0,0.1);
+   background-position: center center;
+   background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-card__label {
+   display: none;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   border-radius: 130px;
+   line-height: 140px;
+   text-align: center;
+   color:black;
+   z-index: 20;
+   
+
+}
+
+
+
+
+.user-card__content {
+   text-align: center;
+   position: relative;
+   z-index: 10;
+   padding: 120px 40px;
+} 
+
+.user-card__name {
+   margin-top: 3%;
+   text-transform: uppercase;
+   font-size: 24px;
+   margin-bottom: 5px;
+   color:black;
+   text-shadow: 0 0 10px rgba(0,0,0,0.2);
+   outline: none;
+
+}
+
+.user-card__description {
+   color:white;
+   line-height: 1.5em;
+   margin: 0;
+   outline: none;
+  
+
+}
+
+.messageBox{
+
+color: white;
+padding-bottom: 1px;
+padding-top: 5px;
+margin-top: 5px;
+margin-bottom: 5px;
+font-family: Helvetica;
+border-radius: 20px;
+}
+
+
+
+
+
+
+</style>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+  </head>
+  <body style="background:url('/static/tapet.png') center center no-repeat;">
+
+	<div class="user-card">
+		<div class="user-card__background"></div>
+		
+		<div class="user-card__content">
+		   <div class="user-card__image-wrapper">
+			  <label for="user-avatar-input" class="user-card__label"><span class="fa fa-upload"></span></label>
+			  <div class="user-card__avatar" style="background-image: url('/static/{{img_Result}}');"></div>
+		   </div>
+         
+         <div class="messageBox" style="background: #5774A7;">
+            <p style="font-size: 130%">Du minder os om {{result}}!<p>
+          
+         </div>
+         <div class="messageBox" style="background:#73ABD3;">
+               <p class="user-card__description" spellcheck="false">{{Disc_result}}</p>
+              
+         </div>
+         <a href="/" class="btn btn-primary" style="background:#8AB3E1; padding-left: 36%; padding-right: 36%; border-radius: 20px; border-color:#8AB3E1;">Tag Quizzen Igen</a>
+        
+		
+      </div>
+		
+	
+		
+		<input type="file" accept="image/png, image/jpeg, image/gif" name="avatar" id="user-avatar-input" class="user-card__input">
+	 </div>
+
+    
+  </body>
+</html>
